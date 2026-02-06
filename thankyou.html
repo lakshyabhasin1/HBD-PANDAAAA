@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thank You 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:'Comic Sans MS', cursive;
+    background:linear-gradient(135deg,#ff9ecf,#ffb6e6,#ffc6f0);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    overflow:hidden;
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    animation:float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);opacity:1;}
+    100%{transform:translateY(-110vh);opacity:0;}
+}
+
+/* Thank You Box */
+.thank-box{
+    background:rgba(255,255,255,0.95);
+    padding:40px;
+    border-radius:25px;
+    width:90%;
+    max-width:520px;
+    box-shadow:0 0 40px #ff66b2;
+    animation:pop 0.6s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0.7);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
+
+h1{
+    color:#ff0080;
+    font-size:30px;
+    margin-bottom:15px;
+    text-shadow:0 0 10px #ff66cc;
+}
+
+p{
+    font-size:16px;
+    color:#444;
+}
+
+.madeby{
+    margin-top:20px;
+    font-size:13px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio autoplay loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<div class="thank-box">
+    <h1>Thank You So Much 💖✨</h1>
+    <p>
+        Your feedback means a lot to us 🥹💕<br>
+        We hope this small surprise made your day special and unforgettable 🎂✨
+    </p>
+
+    <p>
+        Once again… Happy 17th Birthday 🎉💖<br>
+        Stay cute, stay dramatic, stay amazing forever 😌✨
+    </p>
+
+    <div class="madeby">
+        Made with love 💕 by your friends — Lakshya, Jai, Arush & Vernika ✨
+    </div>
+</div>
+
+<script>
+
+/* Floating Hearts Animation */
+setInterval(()=>{
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="💖";
+    heart.style.left=Math.random()*100+"vw";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+},600);
+
+</script>
+
+</body>
+</html>
